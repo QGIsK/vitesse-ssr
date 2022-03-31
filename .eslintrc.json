@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "@antfu"
+  ],
+  "rules": {
+    "vue/html-self-closing": "off",
+    "space-before-function-paren": "off",
+    "vue/singleline-html-element-content-newline": "off"
+  }
+}
