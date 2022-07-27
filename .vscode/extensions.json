@@ -1,7 +1,6 @@
   {
     "recommendations": [
-      // vue/js extensions
-      "johnsoncodehk.volar",
+      "vue.volar",
       "dbaeumer.vscode-eslint",
       // git extension
       "eamodio.gitlens"
