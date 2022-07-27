@@ -6,21 +6,14 @@ export interface PageProps {
 }
 
 export interface PageContext<T extends PageProps> {
-  theme: string
   documentProps: {
     title: string
     description: string
   }
-  url: string
+  urlPathname?: string
   pageProps: T
-  urlNormalized: string
-  urlParsed: {
-    pathName: string
-    search: Record<string, string> | null
-    hash: string | null
-  }
   redirectTo: string
-  cookies: string
+  cookies: string | undefined
   Page: ComponentOptions
 }
 

@@ -1,6 +1,6 @@
 {
   "extends": [
-    "@antfu"
+    "@antfu/vue"
   ],
   "rules": {
     "vue/html-self-closing": "off",

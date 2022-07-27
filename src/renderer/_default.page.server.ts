@@ -31,11 +31,9 @@ async function render(pageContext: PageContextBuiltIn & DefaultPageContext) {
         <meta name="description" content="${desc}" />
         <title>${title}</title>
 
-        
         <link 
           rel="stylesheet"
           href="https://fonts.demiann.dev/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap">
-
       </head>
       <body>
         <div id="app">${dangerouslySkipEscape(appHtml)}</div>

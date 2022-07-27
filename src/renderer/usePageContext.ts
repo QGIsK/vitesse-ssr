@@ -13,6 +13,7 @@ const key = Symbol()
 
 function usePageContext() {
   const pageContext = inject(key)
+  if (!pageContext) throw new Error('setPageContext() not called in parent')
   return pageContext
 }
 
