@@ -14,7 +14,8 @@ async function render(pageContext: PageContextBuiltIn & DefaultPageContext) {
   const { redirectTo, cookies, documentProps } = pageContext
   if (redirectTo) return { redirectTo }
 
-  setSSRBackendCookies(cookies)
+  if (cookies)
+    setSSRBackendCookies(cookies)
 
   const app = createApp(pageContext)
   const appHtml = await renderToString(app)
