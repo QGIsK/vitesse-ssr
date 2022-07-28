@@ -1,0 +1,80 @@
+{
+    "vue-script-setup-ts": {
+        "scope": "vue",
+        "prefix": "<sc",
+        "body": [
+            "<template>",
+            "  <div>",
+            "    <slot />",
+            "  </div>",
+            "</template>",
+            "",
+            "<script setup lang=\"ts\">",
+            "defineProps({})",
+            "</script>"
+        ]
+    },
+    "import": {
+        "scope": "javascript,typescript",
+        "prefix": "im",
+        "body": [
+            "import { $1 } from '$2';"
+        ],
+        "description": "Import a module"
+    },
+    "vue-template-ref": {
+        "scope": "javascript,typescript,vue",
+        "prefix": "tref",
+        "body": [
+            "const ${1:el} = shallowRef<HTMLDivElement>()",
+        ]
+    },
+    "vue-computed": {
+        "scope": "javascript,typescript,vue",
+        "prefix": "com",
+        "body": [
+            "computed(() => { $1 })"
+        ]
+    },
+    "vue-watch": {
+        "scope": "javascript,typescript,vue",
+        "prefix": "watch",
+        "body": [
+            "watch(() => {",
+            "  $1",
+            "})"
+        ]
+    },
+    "vue-watch-effect": {
+        "scope": "javascript,typescript,vue",
+        "prefix": "watchE",
+        "body": [
+            "watchEffect(() => {",
+            "  $1",
+            "})"
+        ]
+    },
+    "ssr-route":
+    {
+        "scope": "javascript,typescript",
+        "prefix": "pr",
+        "body": [
+            "export default '/@id$1'"
+        ]
+    },
+    "ssr-on-before": {
+        "scope": "javascript,typescript",
+        "prefix": "ob",
+        "body": [
+            "import type {DefaultPageContext} from '~/types/pagecontext/default';",
+            "",
+            "export const onBeforeRender = (pageContext: DefaultPageContext) => ({",
+            "  pageContext: {",
+            "     pageProps: {",
+            "       id: pageContext.routeParams.id",
+            "     }",
+            "  }",
+            "})",
+        ]
+    }
+}
