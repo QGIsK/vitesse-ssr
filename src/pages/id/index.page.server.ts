@@ -1,7 +1,9 @@
-import {DefaultPageContext} from '~/types/pagecontext/default';
+import type {DefaultPageContext} from '~/types/pagecontext/default';
 
-export const onBeforeRender = (pageContext: DefaultPageContext) => ({pageContext: {
-    pageProps: {
-        id: pageContext.routeParams.id,
+export const onBeforeRender = (pageContext: DefaultPageContext) => ({
+    pageContext: {
+        pageProps: {
+            id: pageContext.routeParams.id,
+        },
     },
-}});
+})

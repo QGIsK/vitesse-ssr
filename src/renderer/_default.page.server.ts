@@ -1,6 +1,6 @@
 import type {PageContextBuiltIn} from 'vite-plugin-ssr'
-
 import type {DefaultPageContext} from '~/types/pagecontext/default'
+
 import {dangerouslySkipEscape, escapeInject} from 'vite-plugin-ssr'
 import {renderToString} from '@vue/server-renderer'
 import {createApp} from './app'
