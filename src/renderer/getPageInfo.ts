@@ -1,14 +1,14 @@
-import type { DefaultPageContext } from '~/types/pagecontext/default'
-import { APP_NAME } from '~/constants'
+import type {DefaultPageContext} from '~/types/pagecontext/default'
+import {APP_NAME} from '~/constants'
 
-export { getPageInfo }
+export {getPageInfo}
 
-function getPageInfo(pageContext: DefaultPageContext): { title: string; description: string } {
-  const title = `${(pageContext.documentProps || {}).title} | ${APP_NAME}` || APP_NAME
+const getPageInfo = (pageContext: DefaultPageContext): { title: string; description: string } => {
+    const title = `${(pageContext.documentProps || {}).title} | ${APP_NAME}` || APP_NAME
 
-  const description
+    const description
     = `${(pageContext.documentProps || {}).description}`
     || ` ${APP_NAME}`
 
-  return { title, description }
+    return {title, description}
 }

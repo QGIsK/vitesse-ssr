@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "lint:fix": "eslint \"./src/**/*.{js,ts,vue}\" \"server/**/*.ts\" --fix",
     "dev": "npm run server",
     "prod": "npm run build && npm run server:prod",
     "build": "vite build && vite build --ssr",
@@ -26,18 +27,17 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "sass": "^1.49.10",
-    "vite-plugin-md": "^0.20.0",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
     "eslint": "^8.18.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
     "eslint-plugin-vue": "^9.1.1",
+    "sass": "^1.49.10",
     "unplugin-auto-import": "^0.6.9",
     "unplugin-icons": "^0.14.1",
     "unplugin-vue-components": "^0.18.5",
+    "vite-plugin-md": "^0.20.0",
     "vite-plugin-windicss": "^1.8.7",
     "vite-svg-loader": "^3.2.0",
     "vue-tsc": "^0.38.1",

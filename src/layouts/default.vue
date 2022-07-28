@@ -3,13 +3,13 @@ import Link from '~/components/Link.vue'
 </script>
 
 <template>
-  <div class="layout">
-    <div class="navigation">
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
+    <div class="layout">
+        <div class="navigation">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+        </div>
+        <div class="content"><slot /></div>
     </div>
-    <div class="content"><slot /></div>
-  </div>
 </template>
 
 <style>
